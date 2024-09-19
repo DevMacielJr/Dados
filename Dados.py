@@ -1,11 +1,26 @@
 import pandas as pd
 import numpy as np
 
+
+# TO-DO: eliminar os comentários "Por Josségio" e ajustar o código
+"""
 # Caminho do arquivo
 caminho_arquivo = r'D:\para_edson\dados.csv'
+""" # TO-DO: retirar, pois foi ajustado pelo código abaixo
 
-# Lê os dados do arquivo CSV
-df = pd.read_csv(caminho_arquivo)
+import os # Por Jossérgio
+
+# Carregar um arquivo CSV
+
+# Por Jossérgio
+# Checa se o arquivo existe
+# TO-DO: Jogar como parâmetro em linha de comando
+ARQUIVO = "/home/usuario/para_edson/dhav2.csv"
+if os.path.exists (ARQUIVO):
+    df = pd.read_csv(ARQUIVO)
+else:
+    print (f"Arquivo {ARQUIVO} não localizado!")
+    quit (1)
 
 # Função para verificar se o período está no DataFrame
 def verificar_periodo(df, data_inicio, data_fim):

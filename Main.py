@@ -2,8 +2,21 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# TO-DO: eliminar os comentários "Por Josségio" e ajustar o código
+
+import os # Por Jossérgio
+
 # Carregar um arquivo CSV
-df = pd.read_csv('D:\para_edson\dhav2.csv')
+
+# Por Jossérgio
+# Checa se o arquivo existe
+# TO-DO: Jogar como parâmetro em linha de comando
+ARQUIVO = "/home/usuario/para_edson/dhav2.csv"
+if os.path.exists (ARQUIVO):
+    df = pd.read_csv(ARQUIVO)
+else:
+    print (f"Arquivo {ARQUIVO} não localizado!")
+    quit (1)
 
 # Visualizar as primeiras linhas do DataFrame
 print(df.head())
